@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contest Aggregator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+<nav id="navbar" style="background:#1e1e2f; color:white; padding:10px 20px; display:flex; justify-content:space-between; align-items:center;">
+  <div id="logo" style="font-weight:bold; font-size:18px;">ContestHub</div>
+  <div id="nav-links" style="display:flex; gap:20px;">
+      <!-- <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Profile</a>
+      <a href="#" class="nav-link">Notifications</a> -->
+      <ul id="nav-links">
+        <li class="nav-link" data-tab="home" title="Home"><i class="fas fa-home"></i></li>
+        <li class="nav-link" data-tab="profile" title="Profile"><i class="fas fa-user"></i></li>
+        <li class="nav-link" data-tab="notifications" title="Notifications"><i class="fas fa-bell"></i></li>
+      </ul>
+  </div>
+</nav>
+
+<!-- Search bar -->
+<input
+  type="text"
+  id="search-bar"
+  placeholder="Search by contest or platform..."
+  style="align-self: center;"
+/>
+
+<!-- Contests container -->
+<!-- <div id="contests-container"></div>
+
+  <h1>Upcoming Programming Contests</h1>
+  <input
+    type="text"
+    id="search-bar"
+    placeholder="Search by contest or platform..."
+    style="width: 100%; padding: 10px; margin-bottom: 15px;"
+/> -->
+<div id="contests-container"
+style="align-items:stretch;"></div>
+
+  <!-- <div id="app">
+    <div id="contests-container">
+      <div class="loading">Loading contests...</div>
+    </div>
+  </div> -->
+
+  <div id="notifications-container" style="display:none;">
+    <h2>Notifications</h2>
+    <ul id="notification-list"></ul>
+</div>
+
+<!-- Profile container -->
+<div id="profile-container" style="display:none; padding:10px;">
+  <h2>User Profile</h2>
+  <div id="user-info">
+      <p><strong>Name:</strong> <span id="user-name">Guest</span></p>
+      <p><strong>Email:</strong> <span id="user-email">guest@example.com</span></p>
+  </div>
+
+  <h3>Selected Contests for Notifications</h3>
+  <ul id="user-contests-list"></ul>
+</div>
+
+<script>
+  // Redirect to login if not logged in
+  const user = localStorage.getItem('user');
+  if (!user) {
+      window.location.href = 'login.html';
+  }
+</script>
+  <script src="app.js"></script>
+</body>
+</html>
