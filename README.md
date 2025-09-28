@@ -11,7 +11,7 @@ A web application that lists upcoming programming contests from multiple platfor
 
 ---
 ## 🚀 Live Demo  
- - 🔗 [ContestHub Live (Render)](https://contesthub-ta7l.onrender.com)
+ - 🔗 [ContestHub Live (Render)](https://contesthub-h4i5.onrender.com)
 ---
 
 ## Features
