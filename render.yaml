@@ -74,3 +74,27 @@ next-steps:
   - Add push/email notifications for subscribed contests
   - Improve UI with Tailwind/Bootstrap
   - Add authentication (JWT + hashed passwords)
+  
+  # render.yaml for ContestHub
+services:
+  - type: web
+    name: contesthub
+    env: node
+    plan: free
+    region: oregon
+    repo: https://github.com/YerraRahul23/ContestHub
+    branch: main
+    rootDir: public          # All your files are in the public folder
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeployTrigger: commit
+    healthCheckPath: /api/contests
+    envVars:
+      - key: PORT
+        value: 10000
+      # Optional: VAPID keys for notifications
+      - key: VAPID_PUBLIC_KEY
+        generateValue: true
+      - key: VAPID_PRIVATE_KEY
+        generateValue: true
+
