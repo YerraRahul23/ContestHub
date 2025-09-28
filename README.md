@@ -36,8 +36,11 @@ A web application that lists upcoming programming contests from multiple platfor
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+# 1. Clone your repo
+git clone https://github.com/YerraRahul23/ContestHub.git
+
+# 2. Move into the project folder
+cd ContestHub
 ```
 
 2. Install dependencies (if any, e.g., Express for backend):
